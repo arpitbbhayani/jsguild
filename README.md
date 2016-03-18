@@ -53,7 +53,8 @@ SPA build with:
 
 ### Nginix config
 
-```server {
+```
+server {
   set $server_uri 127.0.0.1:8142;
   server_name jsguild.practo.local;
   listen 80;
@@ -67,4 +68,5 @@ SPA build with:
     proxy_pass http://$server_uri;
     include proxy_params;
   }
-}```
+}
+```
