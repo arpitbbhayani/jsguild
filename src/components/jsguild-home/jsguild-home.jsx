@@ -4,9 +4,8 @@ import ReactDOM from 'react-dom';
 import '../../client/common.js';
 
 import HeaderComponent from '../jsguild-header/jsguild-header.jsx';
-import DummySearchComponent from '../jsguild-search-dummy/jsguild-search-dummy.jsx';
-import FeaturedLibs from '../jsguild-featured-libs/jsguild-featured-libs.jsx';
-import SearchComponent from '../jsguild-search/jsguild-search.jsx';
+import Index from '../jsguild-index/jsguild-index.jsx';
+import SearchViewComponent from '../jsguild-search-view/jsguild-search-view.jsx';
 
 import { browserHistory, Router, Route, IndexRoute } from 'react-router';
 
@@ -24,7 +23,6 @@ export default class HomeContainer extends React.Component {
       <div>
         <HeaderComponent/>
         { this.props.children }
-        <FeaturedLibs/>
       </div>
     );
   }
@@ -33,8 +31,8 @@ export default class HomeContainer extends React.Component {
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={HomeContainer}>
-      <IndexRoute component={DummySearchComponent} />
-      <Route path="search" component={SearchComponent} />
+      <IndexRoute component={Index} />
+      <Route path="search" component={SearchViewComponent} />
     </Route>
   </Router>
 ), document.getElementById('maincontainer'));

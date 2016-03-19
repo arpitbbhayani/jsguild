@@ -1,2 +1,7 @@
 @import "../../static/css/variables";
 @import "../../static/css/mixins";
+
+.practo-blue.inverted {
+  background: $practo-blue !important;
+  color: #FFF;
+}

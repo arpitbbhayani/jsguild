@@ -21,6 +21,11 @@ app.get('/', function(req, res) {
   res.send(renderHomePage());
 });
 
+// APIs
+app.get('/search', function(req, res) {
+  res.send({'status': 'ok'});
+});
+
 const port = process.env.PORT || config.serverPort;
 app.listen(port, function() {
   console.log('Listening on ' + port);

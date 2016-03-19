@@ -14,7 +14,7 @@ export default class DummySearchComponent extends React.Component {
 
   render() {
     return (
-      <div className="ui basic center aligned segment inverted grey" onClick={this.goToSearch}>
+      <div className="ui basic center aligned segment" onClick={this.goToSearch}>
         <div className="ui huge header">
           <h1><i className="search icon"></i>Dummy search component</h1>
         </div>

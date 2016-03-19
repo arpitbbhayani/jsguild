@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import '../../client/common.js';
 
+import './jsguild-header.scss';
 
 export default class HomeContainer extends React.Component {
   constructor() {
@@ -11,20 +13,12 @@ export default class HomeContainer extends React.Component {
   render() {
     return (
       <div className="ui grid">
-        <div className="two wide column computer tablet only"></div>
-        <div className="twelve wide column computer tablet only">
-          <nav className="ui top menu borderless">
-            <a className="item">JS GUILD</a>
+        <div className="sixteen wide column">
+          <nav className="ui top menu practo-blue inverted borderless">
+            <Link to="/" className="item">JS GUILD</Link>
             <a className="right item">Make javascript awesome again</a>
           </nav>
         </div>
-        <div className="sixteen wide column mobile only">
-          <nav className="ui top menu borderless">
-            <a className="item">JS GUILD</a>
-            <a className="right item">Make javascript awesome again</a>
-          </nav>
-        </div>
-        <div className="two wide column computer tablet only"></div>
       </div>
     );
   }
